@@ -42,7 +42,7 @@ $write_mushra = false;
 $mushraCsvData = array();
 
 
-$input = array("session_test_id");
+$input = array($session->customIds->name1, $session->customIds->name2, $session->customIds->name3, "session_test_id");
 for($i =0; $i < $length; $i++){
 	array_push($input, $session->participant->name[$i]);
 }
@@ -58,7 +58,7 @@ array_push($mushraCsvData, $input);
     foreach ($trial->responses as $response) {
 
 
-    $results = array($session->testId);
+    $results = array($session->customIds->id1, $session->customIds->id2, $session->customIds->id3, $session->testId);
     for($i =0; $i < $length; $i++){
       array_push($results, $session->participant->response[$i]);
     }
@@ -241,7 +241,11 @@ for($i =0; $i < $length; $i++){
 	array_push($input, $session->participant->name[$i]);
 }
 array_push($input,  "trial_id");
-$ratingCount = count($session->trials[0]->responses[0]->stimulusRating);
+
+// TODO(cm): this prevents an error message when doing mushra tests
+$ratingCount = 0;
+// $ratingCount = count($session->trials[0]->responses[0]->stimulusRating);
+
 if($ratingCount > 1) {
     for($i =0; $i < $ratingCount; $i++){
         array_push($input, "stimuli_rating" . ($i+1));

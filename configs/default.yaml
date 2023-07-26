@@ -4,7 +4,10 @@ bufferSize: 2048
 stopOnErrors: true
 showButtonPreviousPage: true
 remoteService: service/write.php
-
+customIds:
+  name1: derp1
+  name2: customId2
+  name3: ayyy
 
 pages:
     - type: generic

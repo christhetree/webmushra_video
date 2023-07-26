@@ -123,7 +123,7 @@ for (var i = 0; i < $("body").children().length; i++) {
 
 
 
-function startup(config) {
+function startup(config, customIds) {
 
 
   if (config == null) {
@@ -196,6 +196,7 @@ function startup(config) {
   session = new Session();
   session.testId = config.testId;
   session.config = configFile;
+  session.customIds = customIds;
 
   if (config.language == undefined) {
     config.language = 'en';
@@ -227,7 +228,14 @@ if (configArg) {
 } else {
   configFile = 'configs/default.yaml';
 }
-
+var customIds = {
+  id1: null,
+  id2: null,
+  id3: null,
+  name1: null,
+  name2: null,
+  name3: null,
+}
 
 // global variables
 var errorHandler = new ErrorHandler();
@@ -244,5 +252,13 @@ var interval2 = null;
 
 YAML.load(configFile, (function(result) {
   config = result;
-  startup(result);
+  if ("customIds" in config) {
+    customIds.name1 = "name1" in config.customIds ? config.customIds.name1 : "customId1";
+    customIds.name2 = "name2" in config.customIds ? config.customIds.name2 : "customId2";
+    customIds.name3 = "name3" in config.customIds ? config.customIds.name3 : "customId3";
+    customIds.id1 = getParameterByName(customIds.name1)
+    customIds.id2 = getParameterByName(customIds.name2)
+    customIds.id3 = getParameterByName(customIds.name3)
+  }
+  startup(result, customIds);
 }));
