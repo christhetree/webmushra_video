@@ -18,13 +18,13 @@ pages:
       showWaveform: true
 #      enableLooping: true
       enableLooping: false
-      reference: configs/resources/audio/mono_ref.wav
+      reference: configs/resources/audio/room_tour_1.wav
       createAnchor35: true
       createAnchor70: true
       stimuli:
-          C1: configs/resources/audio/mono_c1.wav
-          C2: configs/resources/audio/mono_c2.wav
-          C3: configs/resources/audio/mono_c3.wav
+          C1: configs/resources/audio/room_tour_1.wav
+          C2: configs/resources/audio/room_tour_1.wav
+          C3: configs/resources/audio/room_tour_1.wav
     - 
           - random
           - type: mushra
@@ -38,7 +38,7 @@ pages:
             stimuli:
                 C1: configs/resources/audio/mono_c1.wav
                 C2: configs/resources/audio/mono_c2.wav
-                C3: configs/resources/audio/mono_c3.wav          
+                C3: configs/resources/audio/mono_c3.wav
           - type: mushra
             id: trial_random_2
             name: MUSHRA - Random 1
@@ -50,7 +50,7 @@ pages:
             stimuli:
                 C1: configs/resources/audio/mono_c1.wav
                 C2: configs/resources/audio/mono_c2.wav
-                C3: configs/resources/audio/mono_c3.wav          
+                C3: configs/resources/audio/mono_c3.wav
     - type: finish
       name: Thank you
       content: Thank you for attending!
