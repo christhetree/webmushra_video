@@ -18,13 +18,16 @@ pages:
       showWaveform: true
 #      enableLooping: true
       enableLooping: false
-      reference: configs/resources/audio/room_tour_1.wav
+      reference: configs/resources/audio/mono_c1.wav
       createAnchor35: true
       createAnchor70: true
+      video: configs/resources/audio/room_tour_1.mp4
+#      videoWidth: 1280
+#      videoHeight: 128
       stimuli:
-          C1: configs/resources/audio/room_tour_1.wav
-          C2: configs/resources/audio/room_tour_1.wav
-          C3: configs/resources/audio/room_tour_1.wav
+          C1: configs/resources/audio/mono_c1.wav
+          C2: configs/resources/audio/mono_c1.wav
+          C3: configs/resources/audio/mono_c1.wav
     - 
           - random
           - type: mushra
