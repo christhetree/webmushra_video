@@ -24,7 +24,7 @@ pages:
       reference: configs/resources/audio/mono_c1.wav
       createAnchor35: true
       createAnchor70: true
-      video: configs/resources/audio/room_tour_1.mp4
+#      video: configs/resources/audio/room_tour_1.mp4
 #      videoWidth: 1280
 #      videoHeight: 128
       stimuli:
