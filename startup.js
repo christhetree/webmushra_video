@@ -134,7 +134,7 @@ function startup(config, customIds) {
   $.mobile.page.prototype.options.theme = 'a';
   var interval = setInterval(function() {
     $.mobile.loading("show", {
-      text : "Loading...",
+      text : "Downloading all audio tracks, this may take a few minutes. Please ensure you have a fast internet connection.",
       textVisible : true,
       theme : "a",
       html : ""
