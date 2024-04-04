@@ -48,6 +48,8 @@ Useful commands for dealing with permission denied errors (use at your own risk)
 
 ## Notes
 
+More documentation about the original webMUSHRA can be found in `doc/experimenter.md` and `doc/participant.md`
+
 If there is an error in your config file, the "downloading all audio tracks" spinner will be displayed endlessly. 
 You can view the errors by right-clicking in your browser, selecting "inspect" and then clicking on the "console" tab to see what went wrong.
 You can also see the errors in the command line window where the local php server was launched from.

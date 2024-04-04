@@ -38,7 +38,7 @@ pages:
     video: configs/resources/webmushra_video_example/example_video.mp4
     videoWidth: 960
     videoHeight: 540
-    mustRate: true  # This ensures the user must move each rating at least once before continuing
+    mustRate: true  # This requires the user to listen to each rating at least once before continuing
     checkReference: false  # This checks that the reference is rated between (30, 70) before letting the user proceed. This should only be used during the training page or not at all.
     showConditionNames: false
     stimuli:
