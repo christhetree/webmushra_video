@@ -1,4 +1,48 @@
-# webMUSHRA
+# webMUSHRA Video
+
+Author: [christhetree](https://github.com/christhetree)
+
+This is a modified version of webMUSHRA that enables MUSHRA tests to be held with accompanying video files.
+It adds the following features:
+* Video pre-loading, synchronization, seeking, and looping
+* Custom URL parameters for compatibility with Prolific
+* Accurate time tracking per page (accounts for video loading time)
+* Custom user comments at a video level of granularity
+* User-visible error messages and loading spinners
+* Data validation
+* Require users to listen to each condition at least once
+* Require users to move each rating scale at least once
+* Support for mean opinion score (MOS) tests with video (coming soon)
+
+Some benefits of this implementation are the following:
+* Videos do not have to be hosted on a third-party site, giving the user full control over deployment and privacy
+* Videos are automatically loaded in their entirety which enables seamless synchronization with the audio files and prevents buffering / connectivity issues
+* Videos are decoupled from the audio tracks which prevents duplicate videos and enables lossless audio codecs to be used
+* Additional feedback can be captured at a video-level of granularity
+* Can be easily deployed as a study on Prolific through the use of custom URL parameters and revealing a completion code at the end
+
+## Local Quickstart Guide (macOS)
+1. `git clone git@github.com:christhetree/webmushra_video.git`
+2. `cd webmushra_video`
+3. `brew install php`
+4. `php -S localhost:8000`
+5. Open a browser and go to `http://localhost:8000/?config=webmushra_video_example.yaml`
+6. Copy the example `webmushra_video_example.yaml` file and make the changes needed for your experiment.
+7. Local results upon successful completion of the test are written to `results/webmushra_video_example/mushra.csv`
+
+## Server Quickstart Guide (Apache)
+1. TBD
+
+## Notes
+
+If there is an error in your config file, the "downloading all audio tracks" spinner will be displayed endlessly. 
+You can view the errors by right-clicking in your browser, selecting "inspect" and then clicking on the "console" tab to see what went wrong.
+You can also see the errors in the command line window where the local php server was launched from.
+
+Example video and audio attribution: TV BrasilGov, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons
+
+# Original webMUSHRA README starts here:
+
 [![GitHub release](https://img.shields.io/github/release/audiolabs/webMUSHRA.svg)](https://github.com/audiolabs/webMUSHRA/releases/latest)
 [![Github All Releases](https://img.shields.io/github/downloads/audiolabs/webMUSHRA/total.svg)](https://github.com/audiolabs/webMUSHRA/releases/latest)
 [![Build Status](https://travis-ci.org/audiolabs/webMUSHRA.svg?branch=master)](https://travis-ci.org/audiolabs/webMUSHRA)

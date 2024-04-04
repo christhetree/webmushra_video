@@ -1,0 +1,116 @@
+testname: webmushra_video_example
+testId: webmushra_video_example
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+customIds:
+  name1: prolificWorkerId
+  name2: prolificAssignmentId
+  name3: prolificHitId
+
+pages:
+#  Title page ==========================================================================================================
+  - type: generic
+    id: first_page
+    name: Welcome
+    content: <h3>Welcome to webmushra_video_example. Loading the videos for each MUSHRA test page may take a few minutes, please be patient. Please note:<ul><li>Audio playback works best in Google Chrome</li><li>Use a high quality playback setup (avoid using laptop or mobile speakers)</li><li>Do not use wireless bluetooth headphones (their delay will make the audio out of sync with the video)</li><li>Ensure you listen at a high volume to hear subtle differences in noise</li><li>Ensure you can always see the video while listening (press cmd + minus sign to zoom out if necessary)</ul></h3>
+#  Volume page =========================================================================================================
+  - type: volume
+    id: volume
+    name: Volume adjustment
+    content: <h3>Please adjust your device's volume such that you can clearly hear the speaker and details.<br>Do not use wireless bluetooth headphones (their delay will make the audio out of sync with the video).</h3>
+    stimulus: configs/resources/webmushra_video_example/example_audio.wav
+    defaultVolume: 1.0
+    showSlider: false
+#  Training page (training video) ======================================================================================
+  - type: mushra
+    id: training
+    name: MUSHRA Training
+    content: This training page allows you to practice using the interface.<br><br><b>Please read the following instructions carefully.</b><br><br>Loading the videos for each MUSHRA test may take a few minutes, please be patient. Do not click any buttons or proceed with the test until the video has loaded and is visible below. The video cannot be controlled directly, but you can skip to different parts of the video by clicking on the waveform.<br>In these tests you will listen to different audio recordings while watching a corresponding video and compare them to a reference recording. You do not have to listen to each recording in its entirety. You will provide scores for each recording based on your judgement of preference using the following scale.<ul><li>100 - Significantly preferred compared to the reference</li><li>75 - Somewhat preferred compared to the reference</li><li>50 - Preference equal to the reference</li><li>25 - Somewhat less preferred compared to the reference</li><li>0 - Significantly less preferred than the reference</ul><br><b>Remember, you are comparing to the reference recording, please read the instructions above very carefully.</b>
+    showWaveform: true
+    enableLooping: false
+    reference: configs/resources/webmushra_video_example/example_audio.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    strict: true
+    video: configs/resources/webmushra_video_example/example_video.mp4
+    videoWidth: 960
+    videoHeight: 540
+    mustRate: true  # This ensures the user must move each rating at least once before continuing
+    checkReference: false  # This checks that the reference is rated between (30, 70) before letting the user proceed. This should only be used during the training page or not at all.
+    showConditionNames: false
+    stimuli:
+      condition_a: configs/resources/webmushra_video_example/example_audio.wav
+      condition_b: configs/resources/webmushra_video_example/example_audio.wav
+      condition_c: configs/resources/webmushra_video_example/example_audio.wav
+  -
+    - random  # Include this if the order of experiment pages should be randomized
+#  First experiment page ===============================================================================================
+    - type: mushra
+      id: experiment_1
+      name: MUSHRA Experiment 1
+      content: Please read the following instructions carefully.</b><br><br>Loading the videos for each MUSHRA test may take a few minutes, please be patient. Do not click any buttons or proceed with the test until the video has loaded and is visible below. The video cannot be controlled directly, but you can skip to different parts of the video by clicking on the waveform.<br>In these tests you will listen to different audio recordings while watching a corresponding video and compare them to a reference recording. You do not have to listen to each recording in its entirety. You will provide scores for each recording based on your judgement of preference using the following scale.<ul><li>100 - Significantly preferred compared to the reference</li><li>75 - Somewhat preferred compared to the reference</li><li>50 - Preference equal to the reference</li><li>25 - Somewhat less preferred compared to the reference</li><li>0 - Significantly less preferred than the reference</ul><br><b>Remember, you are comparing to the reference recording, please read the instructions above very carefully.</b>
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/webmushra_video_example/example_audio.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      video: configs/resources/webmushra_video_example/example_video.mp4
+      videoWidth: 960
+      videoHeight: 540
+      mustRate: true
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/webmushra_video_example/example_audio.wav
+        condition_b: configs/resources/webmushra_video_example/example_audio.wav
+        condition_c: configs/resources/webmushra_video_example/example_audio.wav
+#  Second experiment page ==============================================================================================
+    - type: mushra
+      id: experiment_2
+      name: MUSHRA Experiment 2
+      content: Please read the following instructions carefully.</b><br><br>Loading the videos for each MUSHRA test may take a few minutes, please be patient. Do not click any buttons or proceed with the test until the video has loaded and is visible below. The video cannot be controlled directly, but you can skip to different parts of the video by clicking on the waveform.<br>In these tests you will listen to different audio recordings while watching a corresponding video and compare them to a reference recording. You do not have to listen to each recording in its entirety. You will provide scores for each recording based on your judgement of preference using the following scale.<ul><li>100 - Significantly preferred compared to the reference</li><li>75 - Somewhat preferred compared to the reference</li><li>50 - Preference equal to the reference</li><li>25 - Somewhat less preferred compared to the reference</li><li>0 - Significantly less preferred than the reference</ul><br><b>Remember, you are comparing to the reference recording, please read the instructions above very carefully.</b>
+      showWaveform: true
+      enableLooping: false
+      reference: configs/resources/webmushra_video_example/example_audio.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      video: configs/resources/webmushra_video_example/example_video.mp4
+      videoWidth: 960
+      videoHeight: 540
+      mustRate: true
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/webmushra_video_example/example_audio.wav
+        condition_b: configs/resources/webmushra_video_example/example_audio.wav
+        condition_c: configs/resources/webmushra_video_example/example_audio.wav
+# Final survey page ====================================================================================================
+  - type: finish
+    name: Thank you!
+    content: Thank you for participating!
+    popupContent: "<h2>Your completion code is: 12345678</h2>"
+    showResults: false
+    writeResults: true
+    questionnaire:
+      - type: text
+        label: Listening device (e.g. Sennheiser 598)
+        name: listening_device
+      - type: likert
+        label: Are you a content creator (e.g. do you make edited videos for an audience?)
+        name: is_creator
+        response:
+          - value: no
+            label: No
+          - value: sometimes
+            label: Sometimes (e.g. as a hobby)
+          - value: often
+            label: Often (e.g. professionally)
+      - type: long_text
+        label: Comments (optional)
+        name: comments
+        optional: true
