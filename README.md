@@ -1,7 +1,5 @@
 # webMUSHRA Video
 
-Author: [christhetree](https://github.com/christhetree)
-
 This is a modified version of webMUSHRA that enables MUSHRA tests to be held with accompanying video files.
 It adds the following features:
 * Video pre-loading, synchronization, seeking, and looping
@@ -11,15 +9,16 @@ It adds the following features:
 * User-visible error messages and loading spinners
 * Data validation
 * Require users to listen to each condition at least once
-* Require users to move each rating scale at least once
+* Require users to rate the reference condition within some range during training
 * Support for mean opinion score (MOS) tests with video (coming soon)
 
 Some benefits of this implementation are the following:
 * Videos do not have to be hosted on a third-party site, giving the user full control over deployment and privacy
 * Videos are automatically loaded in their entirety which enables seamless synchronization with the audio files and prevents buffering / connectivity issues
-* Videos are decoupled from the audio tracks which prevents duplicate videos and enables lossless audio codecs to be used
-* Additional feedback can be captured at a video-level of granularity
+* Videos are decoupled from audio tracks which prevents duplicate videos and enables lossless audio codecs to be used
+* Additional user feedback can be captured at a video-level of granularity to identify problems with specific experiments
 * Can be easily deployed as a study on Prolific through the use of custom URL parameters and revealing a completion code at the end
+* Users can be filtered out during training through the additional optional requirements of having to listen to each condition and / or rate the reference condition >30 and <70 (this prevents people from assuming 0 means "preference equal to the reference" if they do not read the instructions properly)
 
 ## Local Quickstart Guide (macOS)
 1. `git clone git@github.com:christhetree/webmushra_video.git`
@@ -30,14 +29,31 @@ Some benefits of this implementation are the following:
 6. Copy the example `webmushra_video_example.yaml` file and make the changes needed for your experiment.
 7. Local results upon successful completion of the test are written to `results/webmushra_video_example/mushra.csv`
 
-## Server Quickstart Guide (Apache)
-1. TBD
+## Server Quickstart Guide (Ubuntu)
+1. [This](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-22-04) guide can be followed to deploy your own Apache web server.
+2. If using AWS, skip "Step 2 - Adjusting the Firewall" in the above tutorial since it can lock you out of your AWS instance.
+3. If you are getting access denied related errors, ensure that the folders you are using for the server have the appropriate read and write permissions. This is especially important for the `results` folder for data to be written to the `.csv` file successfully by the server once a user submits.
+
+Useful commands for installing the dependencies in Ubuntu:
+* `sudo apt update`
+* `sudo apt install apache2`
+* `sudo apt install php`
+
+Useful commands for dealing with permission denied errors (use at your own risk):
+* `sudo usermod -a -G www-data $USER`
+* `sudo adduser $USER www-data`
+* `sudo adduser www-data $USER`
+* `sudo systemctl restart apache2`
+* `sudo a2enmod rewrite`
 
 ## Notes
 
 If there is an error in your config file, the "downloading all audio tracks" spinner will be displayed endlessly. 
 You can view the errors by right-clicking in your browser, selecting "inspect" and then clicking on the "console" tab to see what went wrong.
 You can also see the errors in the command line window where the local php server was launched from.
+
+This implementation is best suited for short videos less than 2 minutes in length.
+If too many videos and audio files are used in an experiment, the waiting time at the beginning and when changing pages may become too long, especially if the user has a poor internet connection.
 
 Example video and audio attribution: TV BrasilGov, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons
 
