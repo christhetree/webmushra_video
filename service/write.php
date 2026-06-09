@@ -82,7 +82,7 @@ if ($write_mushra) {
 		if ($isFile) {	    	
 			$isFile = false;
 		} else {
-		   fputcsv($fp, $row);
+		   fputcsv($fp, $row, ',', '"', '\\');
 		}
 	}
 	fclose($fp);
@@ -131,7 +131,7 @@ if ($write_pc) {
 		if ($isFile) {	    	
 			$isFile = false;
 		} else {
-		   fputcsv($fp, $row);
+		   fputcsv($fp, $row, ',', '"', '\\');
 		}
 	}
 	fclose($fp);
@@ -176,7 +176,7 @@ if ($write_bs1116) {
 		if ($isFile) {	    	
 			$isFile = false;
 		} else {
-		   fputcsv($fp, $row);
+		   fputcsv($fp, $row, ',', '"', '\\');
 		}
 	}
 	fclose($fp);
@@ -222,7 +222,7 @@ if($write_lms){
 		if ($isFile){
 			$isFile = false; 
 		} else {
-			fputcsv($fp,$row);
+			fputcsv($fp, $row, ',', '"', '\\');
 		}
 	}
 	fclose($fp);
@@ -285,7 +285,7 @@ if($write_lss){
 		if ($isFile){
 			$isFile = false; 
 		} else {
-			fputcsv($fp,$row);
+			fputcsv($fp, $row, ',', '"', '\\');
 		}
 	}
 	fclose($fp);
@@ -334,7 +334,7 @@ if ($write_spatial_localization) {
         if ($isFile) {          
             $isFile = false;
         } else {
-           fputcsv($fp, $row);
+           fputcsv($fp, $row, ',', '"', '\\');
         }
     }
     fclose($fp);
@@ -382,7 +382,7 @@ if ($write_spatial_asw) {
         if ($isFile) {          
             $isFile = false;
         } else {
-           fputcsv($fp, $row);
+           fputcsv($fp, $row, ',', '"', '\\');
         }
     }
     fclose($fp);
@@ -431,7 +431,7 @@ if ($write_spatial_hwd) {
         if ($isFile) {          
             $isFile = false;
         } else {
-           fputcsv($fp, $row);
+           fputcsv($fp, $row, ',', '"', '\\');
         }
     }
     fclose($fp);
@@ -478,7 +478,7 @@ if ($write_spatial_lev) {
         if ($isFile) {          
             $isFile = false;
         } else {
-           fputcsv($fp, $row);
+           fputcsv($fp, $row, ',', '"', '\\');
         }
     }
     fclose($fp);

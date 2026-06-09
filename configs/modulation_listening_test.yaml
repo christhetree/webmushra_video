@@ -1,0 +1,1150 @@
+testname: modulation_listening_test
+testId: modulation_listening_test
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+pages:
+#  Title page ==========================================================================================================
+  - type: generic
+    id: first_page
+    name: Welcome
+    content: >
+      <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; }</style>
+      <div class="welcome-content" style="text-align: left; display: inline-block;">
+      <p>Welcome, and thank you for participating in this listening study conducted by Queen Mary University of London.</p>
+
+      <h3>Participant Information Sheet and Consent Form</h3>
+
+      <p>Please read the
+      <a href='https://drive.google.com/file/d/1C3JvandrGuZDRbpk4JYd7nDrQAZJbbPe/view?usp=drive_link' target='_blank'>participant information sheet</a>
+      before reading and downloading the
+      <a href='https://drive.google.com/file/d/1MZS9V7fUpNYdwZtYLiTykn0MR4Ej-wdD/view?usp=drive_link' target='_blank'>consent form</a>
+      (you should keep a copy for your records).</p>
+
+      <h3>About the Study</h3>
+
+      <p>This study investigates how people perceive changes in synthesized sounds over time
+      (&quot;modulations&quot;), such as vibrato, tremolo, filter movement, and evolving sound textures.
+      The goal is to better understand which types of modulation are most noticeable to listeners
+      and how human perception relates to computational audio analysis and machine learning systems.</p>
+
+      <h2>What You Will Do (Please Read Very Carefully)</h2>
+
+      <p>You will listen to a series of short audio clips.<br>
+      There are 18 questions in total.</p>
+
+      <p>For each question:</p>
+
+      <p>Five short audio samples and a reference sample are provided.<br>
+      <b>Compare each audio sample against the reference sample.</b><br>
+      Using the sliding bars, for each audio sample you will provide a score based on your
+      perception of similarity to the reference sample using the following scale.</p>
+
+      <ul>
+        <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+        <li>25 = Audio sample is slightly different from the reference sample</li>
+        <li>50 = Audio sample is moderately different from the reference sample</li>
+        <li>75 = Audio sample is significantly different from the reference sample</li>
+        <li>100 = Audio sample is completely different from the reference sample</li>
+      </ul>
+
+      <p><b>You are encouraged to make full use of the scale</b>
+      (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+      <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+
+      <h2>Important Instructions (Please Read Very Carefully)</h2>
+
+      <ul>
+        <li>Disable adblock in your browser (Chrome works best)</li>
+        <li>Complete the study in a quiet environment.</li>
+        <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+        <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+        <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+        <li>You may replay audio samples as many times as needed.</li>
+        <li>There are no right or wrong answers. We are interested in your perception.</li>
+      </ul>
+
+      <h3>Duration</h3>
+
+      <p>There are 18 questions in total and the study takes approximately 20–30 minutes to complete.</p>
+
+      <p>You are encouraged to take a short break halfway through the study if needed.</p>
+
+      <h3>Privacy and Consent</h3>
+
+      <p>Participation is voluntary and anonymous. No personally identifying information will be collected.
+      You may stop participation at any time before submitting your responses.</p>
+
+      <p>By continuing, you confirm that:</p>
+
+      <ul>
+        <li>I am at least 18 years old.</li>
+        <li>I consent to participate in this research study.</li>
+        <li>I have read the
+        <a href='https://drive.google.com/file/d/1C3JvandrGuZDRbpk4JYd7nDrQAZJbbPe/view?usp=drive_link' target='_blank'>Participant Information Sheet</a>
+        dated 20.05.2026 version 1.0 for the above study. I have had the opportunity to consider the information,
+        and I understand that I could ask questions by email.</li>
+        <li>I understand that my participation is voluntary and that I am free to stop taking part in the study
+        at any time during participation without giving any reason and without my rights being affected.</li>
+        <li>I understand that my data will be accessed by the research team.</li>
+        <li>I understand that my data will be securely stored in QMUL Microsoft OneDrive and in accordance with
+        the data protection guidelines of the Queen Mary University of London for 5 years in fully anonymised form.</li>
+        <li>I understand that I may withdraw from the study at any time before submitting my responses without
+        giving a reason. I understand that after submission, it will not be possible to withdraw my data because
+        no identifying information is collected and responses cannot be linked back to individual participants.</li>
+        <li>I agree to take part in the above study.</li>
+      </ul>
+
+      <h3>Researchers</h3>
+
+      <p>Sachin Subramanian<br>
+      MSc Sound and Music Computing<br>
+      Queen Mary University of London</p>
+
+      <p>Supervisors:</p>
+
+      <p>Iran Roman<br>
+      Johan Pauwels</p>
+
+      <p>PhD Advisor:</p>
+
+      <p>Christopher Mitcheltree</p>
+
+      <p>For questions regarding the study, please contact:<br>
+      ec25057@qmul.ac.uk</p>
+      </div>
+
+#  Volume page =========================================================================================================
+  - type: volume
+    id: volume
+    name: Volume adjustment
+    content: >
+      <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; }</style>
+      <div class="welcome-content" style="text-align: left; display: inline-block;">
+      <h3>Please adjust your device's listening volume to a comfortable level such that you can clearly hear the audio and its details.<br></h3>
+      <ul>
+        <li>Disable adblock in your browser (Chrome works best)</li>
+        <li>Complete the study in a quiet environment.</li>
+        <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+        <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+        <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+        <li>You may replay audio samples as many times as needed.</li>
+        <li>There are no right or wrong answers. We are interested in your perception.</li>
+      </ul>
+      </div>
+    stimulus: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_1.00hz_-18lufs.wav
+    defaultVolume: 1.0
+    showSlider: false
+
+#  Training page =======================================================================================================
+  - type: mushra
+    id: training
+    name: MUSHRA Training
+    content: >
+      <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+      <div class="welcome-content" style="text-align: left; display: inline-block;">
+      <h2>Important Instructions</h2>
+      <ul>
+        <li>Disable adblock in your browser (Chrome works best)</li>
+        <li>Complete the study in a quiet environment.</li>
+        <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+        <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+        <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+        <li>You may replay audio samples as many times as needed.</li>
+        <li>There are no right or wrong answers. We are interested in your perception.</li>
+      </ul>
+
+      <h2>Please Read Very Carefully</h2>
+      <p>
+        Five short audio samples and a reference sample are provided.<br>
+        <strong>Compare each audio sample against the reference sample.</strong><br>
+        Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+      </p>
+      <ul>
+        <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+        <li>25 = Audio sample is slightly different from the reference sample</li>
+        <li>50 = Audio sample is moderately different from the reference sample</li>
+        <li>75 = Audio sample is significantly different from the reference sample</li>
+        <li>100 = Audio sample is completely different from the reference sample</li>
+      </ul>
+
+      <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+      <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+      </div>
+    showWaveform: false
+    enableLooping: true
+    reference: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_0.25hz_-18lufs.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    strict: true
+    mustRate: true  # This requires the user to listen to each rating at least once before continuing
+    checkReference: true  # This checks that the reference is rated between (0, 20) before letting the user proceed. This should only be used during the training page or not at all.
+    checkRange: true  # This checks that the lowest rating is between (0, 20) and the highest rating is between (80, 100) before letting the user proceed. This should only be used during the training page or not at all.
+    showConditionNames: false
+    stimuli:
+      condition_a: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_0.50hz_-18lufs.wav
+      condition_b: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_1.00hz_-18lufs.wav
+      condition_c: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_2.00hz_-18lufs.wav
+      condition_d: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_4.00hz_-18lufs.wav
+  -
+    - random  # Include this if the order of experiment pages should be randomized
+# Frequency experiment =================================================================================================
+    - type: mushra
+      id: freq_brightness_synthetic
+      name: Question 1
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/freq/brightness_synthetic__256_1024__freq_0.25hz_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true  # This requires the user to listen to each rating at least once before continuing
+      checkReference: false  # This checks that the reference is rated between (0, 20) before letting the user proceed. This should only be used during the training page or not at all.
+      checkRange: false  # This checks that the lowest rating is between (0, 20) and the highest rating is between (80, 100) before letting the user proceed. This should only be used during the training page or not at all.
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/freq/brightness_synthetic__256_1024__freq_0.50hz_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/freq/brightness_synthetic__256_1024__freq_1.00hz_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/freq/brightness_synthetic__256_1024__freq_2.00hz_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/freq/brightness_synthetic__256_1024__freq_4.00hz_-18lufs.wav
+
+    - type: mushra
+      id: freq_brightness_real
+      name: Question 2
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/freq/brightness_real__harmonics__synced_sines__256_1024__freq_0.25hz_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true  # This requires the user to listen to each rating at least once before continuing
+      checkReference: false  # This checks that the reference is rated between (0, 20) before letting the user proceed. This should only be used during the training page or not at all.
+      checkRange: false  # This checks that the lowest rating is between (0, 20) and the highest rating is between (80, 100) before letting the user proceed. This should only be used during the training page or not at all.
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/freq/brightness_real__harmonics__synced_sines__256_1024__freq_0.50hz_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/freq/brightness_real__harmonics__synced_sines__256_1024__freq_1.00hz_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/freq/brightness_real__harmonics__synced_sines__256_1024__freq_2.00hz_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/freq/brightness_real__harmonics__synced_sines__256_1024__freq_4.00hz_-18lufs.wav
+
+    - type: mushra
+      id: freq_warmth_synthetic
+      name: Question 3
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/freq/warmth_synthetic__256_1024__freq_0.25hz_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/freq/warmth_synthetic__256_1024__freq_0.50hz_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/freq/warmth_synthetic__256_1024__freq_1.00hz_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/freq/warmth_synthetic__256_1024__freq_2.00hz_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/freq/warmth_synthetic__256_1024__freq_4.00hz_-18lufs.wav
+
+    - type: mushra
+      id: freq_warmth_real
+      name: Question 4
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/freq/warmth_real__vintage__logue_saw__166_1024__freq_0.25hz_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/freq/warmth_real__vintage__logue_saw__166_1024__freq_0.50hz_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/freq/warmth_real__vintage__logue_saw__166_1024__freq_1.00hz_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/freq/warmth_real__vintage__logue_saw__166_1024__freq_2.00hz_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/freq/warmth_real__vintage__logue_saw__166_1024__freq_4.00hz_-18lufs.wav
+
+    - type: mushra
+      id: freq_richness_synthetic
+      name: Question 5
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/freq/richness_synthetic__256_1024__freq_0.25hz_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/freq/richness_synthetic__256_1024__freq_0.50hz_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/freq/richness_synthetic__256_1024__freq_1.00hz_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/freq/richness_synthetic__256_1024__freq_2.00hz_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/freq/richness_synthetic__256_1024__freq_4.00hz_-18lufs.wav
+
+    - type: mushra
+      id: freq_richness_real
+      name: Question 6
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_0.25hz_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_0.50hz_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_1.00hz_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_2.00hz_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_4.00hz_-18lufs.wav
+  -
+    - random  # Include this if the order of experiment pages should be randomized
+# Amplitude experiment =================================================================================================
+    - type: mushra
+      id: amp_brightness_synthetic
+      name: Question 7
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/amp/brightness_synthetic__256_1024__amp_1.00hz_0.10_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/amp/brightness_synthetic__256_1024__amp_1.00hz_0.30_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/amp/brightness_synthetic__256_1024__amp_1.00hz_0.50_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/amp/brightness_synthetic__256_1024__amp_1.00hz_0.70_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/amp/brightness_synthetic__256_1024__amp_1.00hz_0.90_-18lufs.wav
+
+    - type: mushra
+      id: amp_brightness_real
+      name: Question 8
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/amp/brightness_real__harmonics__synced_sines__256_1024__amp_1.00hz_0.10_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/amp/brightness_real__harmonics__synced_sines__256_1024__amp_1.00hz_0.30_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/amp/brightness_real__harmonics__synced_sines__256_1024__amp_1.00hz_0.50_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/amp/brightness_real__harmonics__synced_sines__256_1024__amp_1.00hz_0.70_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/amp/brightness_real__harmonics__synced_sines__256_1024__amp_1.00hz_0.90_-18lufs.wav
+
+    - type: mushra
+      id: amp_warmth_synthetic
+      name: Question 9
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/amp/warmth_synthetic__256_1024__amp_1.00hz_0.10_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/amp/warmth_synthetic__256_1024__amp_1.00hz_0.30_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/amp/warmth_synthetic__256_1024__amp_1.00hz_0.50_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/amp/warmth_synthetic__256_1024__amp_1.00hz_0.70_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/amp/warmth_synthetic__256_1024__amp_1.00hz_0.90_-18lufs.wav
+
+    - type: mushra
+      id: amp_warmth_real
+      name: Question 10
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/amp/warmth_real__vintage__logue_saw__166_1024__amp_1.00hz_0.10_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/amp/warmth_real__vintage__logue_saw__166_1024__amp_1.00hz_0.30_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/amp/warmth_real__vintage__logue_saw__166_1024__amp_1.00hz_0.50_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/amp/warmth_real__vintage__logue_saw__166_1024__amp_1.00hz_0.70_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/amp/warmth_real__vintage__logue_saw__166_1024__amp_1.00hz_0.90_-18lufs.wav
+
+    - type: mushra
+      id: amp_richness_synthetic
+      name: Question 11
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/amp/richness_synthetic__256_1024__amp_1.00hz_0.10_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/amp/richness_synthetic__256_1024__amp_1.00hz_0.30_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/amp/richness_synthetic__256_1024__amp_1.00hz_0.50_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/amp/richness_synthetic__256_1024__amp_1.00hz_0.70_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/amp/richness_synthetic__256_1024__amp_1.00hz_0.90_-18lufs.wav
+
+    - type: mushra
+      id: amp_richness_real
+      name: Question 12
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.10_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.30_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.50_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.70_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.90_-18lufs.wav
+#  Optional break page ==================================================================================================
+  - type: generic
+    id: optional_break
+    name: Optional Break
+    content: >
+      <p>You are 66% done with the listening test, feel free to take an optional break before continuing.</p>
+  -
+    - random  # Include this if the order of experiment pages should be randomized
+# Regularity experiment ================================================================================================
+    - type: mushra
+      id: reg_brightness_synthetic
+      name: Question 13
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/reg/brightness_synthetic__256_1024__reg_1.00hz_0.000_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/reg/brightness_synthetic__256_1024__reg_1.00hz_0.125_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/reg/brightness_synthetic__256_1024__reg_1.00hz_0.250_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/reg/brightness_synthetic__256_1024__reg_1.00hz_0.375_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/reg/brightness_synthetic__256_1024__reg_1.00hz_0.500_-18lufs.wav
+
+    - type: mushra
+      id: reg_brightness_real
+      name: Question 14
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/reg/brightness_real__harmonics__synced_sines__256_1024__reg_1.00hz_0.000_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/reg/brightness_real__harmonics__synced_sines__256_1024__reg_1.00hz_0.125_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/reg/brightness_real__harmonics__synced_sines__256_1024__reg_1.00hz_0.250_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/reg/brightness_real__harmonics__synced_sines__256_1024__reg_1.00hz_0.375_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/reg/brightness_real__harmonics__synced_sines__256_1024__reg_1.00hz_0.500_-18lufs.wav
+
+    - type: mushra
+      id: reg_warmth_synthetic
+      name: Question 15
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/reg/warmth_synthetic__256_1024__reg_1.00hz_0.000_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/reg/warmth_synthetic__256_1024__reg_1.00hz_0.125_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/reg/warmth_synthetic__256_1024__reg_1.00hz_0.250_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/reg/warmth_synthetic__256_1024__reg_1.00hz_0.375_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/reg/warmth_synthetic__256_1024__reg_1.00hz_0.500_-18lufs.wav
+
+    - type: mushra
+      id: reg_warmth_real
+      name: Question 16
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/reg/warmth_real__vintage__logue_saw__166_1024__reg_1.00hz_0.000_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/reg/warmth_real__vintage__logue_saw__166_1024__reg_1.00hz_0.125_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/reg/warmth_real__vintage__logue_saw__166_1024__reg_1.00hz_0.250_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/reg/warmth_real__vintage__logue_saw__166_1024__reg_1.00hz_0.375_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/reg/warmth_real__vintage__logue_saw__166_1024__reg_1.00hz_0.500_-18lufs.wav
+
+    - type: mushra
+      id: reg_richness_synthetic
+      name: Question 17
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/reg/richness_synthetic__256_1024__reg_1.00hz_0.000_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/reg/richness_synthetic__256_1024__reg_1.00hz_0.125_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/reg/richness_synthetic__256_1024__reg_1.00hz_0.250_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/reg/richness_synthetic__256_1024__reg_1.00hz_0.375_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/reg/richness_synthetic__256_1024__reg_1.00hz_0.500_-18lufs.wav
+
+    - type: mushra
+      id: reg_richness_real
+      name: Question 18
+      content: >
+        <style>.welcome-content li { width: 100% !important; margin-left: 0 !important; } #slider { display: none !important; } #parentWavesurfer canvas, #waveTable canvas { pointer-events: none !important; }</style>
+        <div class="welcome-content" style="text-align: left; display: inline-block;">
+        <h2>Important Instructions</h2>
+        <ul>
+          <li>Complete the study in a quiet environment.</li>
+          <li>Use a high quality playback setup (use headphones or hifi speakers; do not use laptop or mobile speakers)</li>
+          <li>Adjust the listening volume to a comfortable level and feel free to adjust the volume during the test.</li>
+          <li>Ensure you are listening at a high enough volume to hear subtle differences in audio samples.</li>
+          <li>You may replay audio samples as many times as needed.</li>
+          <li>There are no right or wrong answers. We are interested in your perception.</li>
+        </ul>
+
+        <h2>Please Read Very Carefully</h2>
+        <p>
+          Five short audio samples and a reference sample are provided.<br>
+          <strong>Compare each audio sample against the reference sample.</strong><br>
+          Using the sliding bars, for each audio sample you will provide a score based on your perception of similarity to the reference sample using the following scale.
+        </p>
+        <ul>
+          <li>0 = No audible difference; audio sample is identical to the reference sample</li>
+          <li>25 = Audio sample is slightly different from the reference sample</li>
+          <li>50 = Audio sample is moderately different from the reference sample</li>
+          <li>75 = Audio sample is significantly different from the reference sample</li>
+          <li>100 = Audio sample is completely different from the reference sample</li>
+        </ul>
+
+        <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
+
+        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        </div>
+      showWaveform: false
+      enableLooping: true
+      reference: configs/resources/modulation_listening_test/reg/richness_real__filter__acid_saw__46_1024__inverted__reg_1.00hz_0.000_-18lufs.wav
+      createAnchor35: false
+      createAnchor70: false
+      randomize: true
+      strict: true
+      mustRate: true
+      checkReference: false
+      checkRange: false
+      showConditionNames: false
+      stimuli:
+        condition_a: configs/resources/modulation_listening_test/reg/richness_real__filter__acid_saw__46_1024__inverted__reg_1.00hz_0.125_-18lufs.wav
+        condition_b: configs/resources/modulation_listening_test/reg/richness_real__filter__acid_saw__46_1024__inverted__reg_1.00hz_0.250_-18lufs.wav
+        condition_c: configs/resources/modulation_listening_test/reg/richness_real__filter__acid_saw__46_1024__inverted__reg_1.00hz_0.375_-18lufs.wav
+        condition_d: configs/resources/modulation_listening_test/reg/richness_real__filter__acid_saw__46_1024__inverted__reg_1.00hz_0.500_-18lufs.wav
+
+# Final survey page ====================================================================================================
+  - type: finish
+    name: Thank you!
+    content: Thank you for participating!
+    showResults: false
+    writeResults: true
+    questionnaire:
+      - type: text
+        label: What listening device are you using for audio sample playback? (e.g. Sennheiser 598, Apple airpods, studio monitors, etc.)
+        name: listening_device
+      - type: likert
+        label: How would you describe your experience with music or audio production?
+        name: musical_experience
+        response:
+          - value: none
+            label: No formal training or experience
+          - value: amateur
+            label: Amateur (e.g. self-taught, hobbyist)
+          - value: intermediate
+            label: Intermediate (e.g. music degree, semi-professional)
+          - value: professional
+            label: Professional (e.g. working musician, audio engineer)
+      - type: long_text
+        label: Comments (optional)
+        name: comments
+        optional: true
