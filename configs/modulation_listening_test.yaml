@@ -6,7 +6,7 @@ showButtonPreviousPage: true
 remoteService: service/write.php
 
 pages:
-#  Title page ==========================================================================================================
+# Title page ===========================================================================================================
   - type: generic
     id: first_page
     name: Welcome
@@ -117,7 +117,7 @@ pages:
       ec25057@qmul.ac.uk</p>
       </div>
 
-#  Volume page =========================================================================================================
+# Volume page ==========================================================================================================
   - type: volume
     id: volume
     name: Volume adjustment
@@ -139,7 +139,14 @@ pages:
     defaultVolume: 1.0
     showSlider: false
 
-#  Training page =======================================================================================================
+# Training start =======================================================================================================
+  - type: generic
+    id: training_start
+    name: Training Start
+    content: >
+      <p>The next page is a training question to become familiar with the test.</p>
+
+# Training page ========================================================================================================
   - type: mushra
     id: training
     name: MUSHRA Training
@@ -191,6 +198,14 @@ pages:
       condition_b: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_1.00hz_-18lufs.wav
       condition_c: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_2.00hz_-18lufs.wav
       condition_d: configs/resources/modulation_listening_test/training/training__basics__fm_fold__78_1024__freq_4.00hz_-18lufs.wav
+
+# Training completed ===================================================================================================
+  - type: generic
+    id: training_completed
+    name: Training Completed
+    content: >
+      <p>You have successfully completed training, the test will now begin on the next page.</p>
+
   -
     - random  # Include this if the order of experiment pages should be randomized
 # Frequency experiment =================================================================================================
@@ -807,12 +822,14 @@ pages:
         condition_b: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.50_-18lufs.wav
         condition_c: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.70_-18lufs.wav
         condition_d: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.90_-18lufs.wav
-#  Optional break page ==================================================================================================
+
+# Optional break page ==================================================================================================
   - type: generic
     id: optional_break
     name: Optional Break
     content: >
       <p>You are 66% done with the listening test, feel free to take an optional break before continuing.</p>
+
   -
     - random  # Include this if the order of experiment pages should be randomized
 # Regularity experiment ================================================================================================
