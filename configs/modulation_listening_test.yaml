@@ -189,7 +189,8 @@ pages:
     createAnchor70: false
     randomize: true
     strict: true
-    mustRate: true  # This requires the user to listen to each rating at least once before continuing
+    mustRate: true  # This requires the user to listen to each condition at least once before continuing
+    mustMoveSliders: true  # This requires the user to move each rating slider at least once before continuing
     checkReference: true  # This checks that the reference is rated between (0, 20) before letting the user proceed. This should only be used during the training page or not at all.
     checkRange: true  # This checks that the lowest rating is between (0, 20) and the highest rating is between (80, 100) before letting the user proceed. This should only be used during the training page or not at all.
     showConditionNames: false
@@ -250,7 +251,8 @@ pages:
       createAnchor70: false
       randomize: true
       strict: true
-      mustRate: true  # This requires the user to listen to each rating at least once before continuing
+      mustRate: true  # This requires the user to listen to each condition at least once before continuing
+      mustMoveSliders: true  # This requires the user to move each rating slider at least once before continuing
       checkReference: false  # This checks that the reference is rated between (0, 20) before letting the user proceed. This should only be used during the training page or not at all.
       checkRange: false  # This checks that the lowest rating is between (0, 20) and the highest rating is between (80, 100) before letting the user proceed. This should only be used during the training page or not at all.
       showConditionNames: false
@@ -301,7 +303,8 @@ pages:
       createAnchor70: false
       randomize: true
       strict: true
-      mustRate: true  # This requires the user to listen to each rating at least once before continuing
+      mustRate: true  # This requires the user to listen to each condition at least once before continuing
+      mustMoveSliders: true  # This requires the user to move each rating slider at least once before continuing
       checkReference: false  # This checks that the reference is rated between (0, 20) before letting the user proceed. This should only be used during the training page or not at all.
       checkRange: false  # This checks that the lowest rating is between (0, 20) and the highest rating is between (80, 100) before letting the user proceed. This should only be used during the training page or not at all.
       showConditionNames: false
@@ -353,6 +356,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -404,6 +408,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -455,6 +460,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -506,6 +512,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -514,8 +521,8 @@ pages:
         condition_b: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_1.00hz_-18lufs.wav
         condition_c: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_2.00hz_-18lufs.wav
         condition_d: configs/resources/modulation_listening_test/freq/richness_real__filter__acid_saw__46_1024__inverted__freq_4.00hz_-18lufs.wav
-  -
-    - random  # Include this if the order of experiment pages should be randomized
+#  -
+#    - random  # Include this if the order of experiment pages should be randomized
 # Amplitude experiment =================================================================================================
     - type: mushra
       id: amp_brightness_synthetic
@@ -559,6 +566,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -610,6 +618,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -661,6 +670,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -712,6 +722,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -763,6 +774,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -814,6 +826,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -823,15 +836,15 @@ pages:
         condition_c: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.70_-18lufs.wav
         condition_d: configs/resources/modulation_listening_test/amp/richness_real__filter__acid_saw__46_1024__inverted__amp_1.00hz_0.90_-18lufs.wav
 
-# Optional break page ==================================================================================================
-  - type: generic
-    id: optional_break
-    name: Optional Break
-    content: >
-      <p>You are 66% done with the listening test, feel free to take an optional break before continuing.</p>
-
-  -
-    - random  # Include this if the order of experiment pages should be randomized
+## Optional break page ==================================================================================================
+#  - type: generic
+#    id: optional_break
+#    name: Optional Break
+#    content: >
+#      <p>You are 66% done with the listening test, feel free to take an optional break before continuing.</p>
+#
+#  -
+#    - random  # Include this if the order of experiment pages should be randomized
 # Regularity experiment ================================================================================================
     - type: mushra
       id: reg_brightness_synthetic
@@ -875,6 +888,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -926,6 +940,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -977,6 +992,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -1028,6 +1044,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -1079,6 +1096,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -1130,6 +1148,7 @@ pages:
       randomize: true
       strict: true
       mustRate: true
+      mustMoveSliders: true
       checkReference: false
       checkRange: false
       showConditionNames: false
@@ -1149,18 +1168,26 @@ pages:
       - type: text
         label: What listening device are you using for audio sample playback? (e.g. Sennheiser 598, Apple airpods, studio monitors, etc.)
         name: listening_device
-      - type: likert
-        label: How would you describe your experience with music or audio production?
-        name: musical_experience
-        response:
-          - value: none
-            label: No formal training or experience
-          - value: amateur
-            label: Amateur (e.g. self-taught, hobbyist)
-          - value: intermediate
-            label: Intermediate (e.g. music degree, semi-professional)
-          - value: professional
-            label: Professional (e.g. working musician, audio engineer)
+
+#      - type: likert
+#        label: How would you describe your experience with music or audio production?
+#        name: musical_experience
+#        response:
+#          - value: none
+#            label: No formal training or experience
+#          - value: amateur
+#            label: Amateur (e.g. self-taught, hobbyist)
+#          - value: intermediate
+#            label: Intermediate (e.g. music degree, semi-professional)
+#          - value: professional
+#            label: Professional (e.g. working musician, audio engineer)
+
+      - type: number
+        label: How many years of experience do you have in music and / or audio production?
+        name: years_experience
+        min: 0
+        max: 99
+        default: 0
       - type: long_text
         label: Comments (optional)
         name: comments
