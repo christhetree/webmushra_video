@@ -53,7 +53,7 @@ pages:
       <p><b>You are encouraged to make full use of the scale</b>
       (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-      <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+      <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
 
       <h2>Important Instructions (Please Read Very Carefully)</h2>
 
@@ -180,7 +180,7 @@ pages:
 
       <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-      <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+      <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
       </div>
     showWaveform: false
     enableLooping: true
@@ -242,7 +242,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -294,7 +294,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -346,7 +346,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -398,7 +398,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -450,7 +450,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -502,7 +502,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -556,7 +556,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -608,7 +608,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -660,7 +660,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -712,7 +712,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -764,7 +764,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -816,7 +816,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -878,7 +878,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -930,7 +930,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -982,7 +982,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -1034,7 +1034,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -1086,7 +1086,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -1138,7 +1138,7 @@ pages:
 
         <p><strong>You are encouraged to make full use of the scale</strong> (i.e., your lowest rating is close or equal to 0 and your highest rating is close or equal to 100).</p>
 
-        <p>You must listen to all five audio samples and the reference sample to proceed.</p>
+        <p>You must listen to the reference sample and rate all five audio samples to proceed.</p>
         </div>
       showWaveform: false
       enableLooping: true
@@ -1182,12 +1182,9 @@ pages:
 #          - value: professional
 #            label: Professional (e.g. working musician, audio engineer)
 
-      - type: number
+      - type: text
         label: How many years of experience do you have in music and / or audio production?
         name: years_experience
-        min: 0
-        max: 99
-        default: 0
       - type: long_text
         label: Comments (optional)
         name: comments
