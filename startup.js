@@ -99,6 +99,10 @@ function addPagesToPageManager(_pageManager, _pages) {
         var likertSingleStimulusPageManager = new LikertSingleStimulusPageManager();
         likertSingleStimulusPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
         likertSingleStimulusPageManager = null;
+      } else if (pageConfig.type == "likert_single_stimulus_desc") {
+        var likertSingleStimulusPageManagerWithDesc = new LikertSingleStimulusPageManagerWithDesc();
+        likertSingleStimulusPageManagerWithDesc.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
+        likertSingleStimulusPageManagerWithDesc = null;
       } else if (pageConfig.type == "likert_multi_stimulus") {
         var likertMultiStimulusPage = new LikertMultiStimulusPage(pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
         _pageManager.addPage(likertMultiStimulusPage);

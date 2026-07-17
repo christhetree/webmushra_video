@@ -1,0 +1,81 @@
+# Likert single stimulus with video syncing, 4 star responses, and text descriptions
+
+testname: Likert Single Stimulus Video with Descriptions
+testId: lss_4scale_video_desc
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+pages:
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: >
+        <h3>Welcome to the LSS Video Evaluation.</h3>
+        <p>Please evaluate the audio accompanying the video using the 4-star scale.</p>
+
+    - type: likert_single_stimulus_desc
+      id: lss_video_desc_1
+      name: Video Evaluation
+      content: Please rate your preference using the star scale.
+      video: configs/resources/webmushra_video_example/example_video.mp4
+      videoWidth: 960
+      videoHeight: 540
+      showWaveform: false
+      mustRate: true
+      stimuli:
+          C1: configs/resources/webmushra_video_example/example_audio.wav
+      descriptions:
+        - "Ποιότητα Ήχου (Audio Quality):"
+        - "Συγχρονισμός Βίντεο (Video Sync):"
+      response:
+        -
+          - value: not at all
+            label: Not at all
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png
+          - value: not a lot
+            label: Not a lot
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png
+          - value: a bit
+            label: A bit
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png
+          - value: much
+            label: Much
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png          
+
+        -
+          - value: not at all
+            label: Not at all
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png
+          - value: not a lot
+            label: Not a lot
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png
+          - value: a bit
+            label: A bit
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png
+          - value: much
+            label: Much
+            img: configs/resources/images/star_off.png
+            imgSelected: configs/resources/images/star_on.png
+            imgHigherResponseSelected: configs/resources/images/star_on.png          
+
+    - type: finish
+      name: Thank you
+      content: Thank you for attending
+      showResults: true
+      writeResults: true
